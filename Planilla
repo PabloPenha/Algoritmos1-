@@ -1,0 +1,33 @@
+#include <iostream>
+#include "conio.h"
+#include "stdio.h"
+#include "stdlib.h"
+
+using namespace std;
+
+void main(){
+float IVA, AFP, SB, SM, SN, S, SP;
+int N, i=1;
+SM=1400;
+IVA=0.13;
+AFP=0.121;
+S=0;
+cout<<"Ingrese el numero de personas: ";
+cin>>N;
+while(i<=N){
+	cout<<"Ingrese el Salario de la persona "<<i<<": ";
+	cin>>SB;
+	if(SB>(2*SM)){
+		SN=SB-(SB*0.13)-(SB*0.121);
+		S=S+SN;
+	}else{
+		SN=SB-(SB*0.121);
+		S=S+SN;
+	}
+	i++;
+}
+SP=S/N;
+cout<<"El Promedio de los salarios es: ";
+cout<<SP;
+getch();
+}
