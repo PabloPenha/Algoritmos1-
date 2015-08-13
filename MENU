@@ -1,0 +1,60 @@
+#include <iostream>
+#include "conio.h"
+#include "stdio.h"
+#include "stdlib.h"
+
+using namespace std;
+
+void main(){
+int opcion, l, Area, x, y, z, j, k, Promedio, Mayor ;
+	do{
+		
+		cout<<endl<<"**		MENU		**";
+		cout<<endl<<"1. Area del cuadrado: ";
+		cout<<endl<<"2. Promedio de tres numeros: ";
+		cout<<endl<<"3. Mayor de dos numeros";
+		cout<<endl<<"0. Salir";
+		cout<<endl<<"Seleccione una opcion: ";
+		cin>>opcion;
+		switch(opcion){
+		case 1: cout<<"Ingrese el lado del cuadrado: ";
+				cin>>l;
+				Area=l*l;
+				cout<<"El Area del cuadrado es: "<<Area;
+				break;
+
+		case 2: cout<<"Ingrese numero 1: ";
+				cin>>x;
+				cout<<"Ingrese numero 2: ";
+				cin>>y;
+				cout<<"Ingrese numero 3: ";
+				cin>>z;
+				Promedio=((x+y+z)/3);
+				cout<<"El Promedio es: "<<Promedio;
+				break;
+
+		case 3: cout<<"Ingrese numero 1: ";
+				cin>>j;
+				cout<<"Ingrese numero 2: ";
+				cin>>k;
+				if(j>k){
+					Mayor=j;
+				}
+				else{
+					Mayor=k;
+				}
+				cout<<"El numero Mayor es: "<<Mayor;
+				break;
+
+		case 0: cout<<"Salir?--->Enter";
+				break;
+
+		default: cout<<"Opcion Invalida";
+				break;
+				
+
+			
+		}getch();
+		system("cls");
+	}while(opcion!=0);
+}
